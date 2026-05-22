@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Provit Farm Village – Wisata Edukasi Hewan Surabaya</title>
+  <meta name="description" content="Provit Farm Village – destinasi wisata edukasi hewan terlengkap di Surabaya. Saksikan 30+ spesies hewan unik, nikmati Anglo Garden, Animal Show, Kuda Tunggang, dan Susu Kambing Etafresh." />
+  <meta name="keywords" content="provit farm village, wisata edukasi hewan surabaya, mini zoo surabaya, provitland, wisata keluarga surabaya, susu kambing etafresh" />
+  <meta property="og:title" content="Provit Farm Village – Wisata Edukasi Hewan Surabaya" />
+  <meta property="og:description" content="Destinasi wisata edukasi hewan terlengkap di Surabaya. Buka setiap hari 08.00–16.00 WIB." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET & BASE ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green-dark:  #1B4332;
+      --green:       #2D6A4F;
+      --green-mid:   #40916C;
+      --green-light: #74C69D;
+      --green-pale:  #D8F3DC;
+      --brown:       #7B4F2E;
+      --brown-light: #B07D57;
+      --gold:        #F5A623;
+      --gold-light:  #FFD166;
+      --cream:       #FBF7F1;
+      --cream-dark:  #F0E6D3;
+      --white:       #FFFFFF;
+      --text-dark:   #1C1C1C;
+      --text-mid:    #4A4A4A;
+      --text-light:  #7A7A7A;
+      --wa-green:    #25D366;
+      --radius-sm:   8px;
+      --radius-md:   16px;
+      --radius-lg:   24px;
+      --radius-xl:   40px;
+      --shadow-sm:   0 2px 12px rgba(27,67,50,0.10);
+      --shadow-md:   0 8px 32px rgba(27,67,50,0.14);
+      --shadow-lg:   0 20px 60px rgba(27,67,50,0.18);
+      --transition:  0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── UTILITY ─── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .section-tag {
+      display: inline-block;
+      background: var(--green-pale);
+      color: var(--green-dark);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .section-subtitle {
+      color: var(--text-mid);
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 540px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--green);
+      padding: 13px 27px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: 2px solid var(--green);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .btn-outline:hover { background: var(--green); color: #fff; transform: translateY(-2px); }
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--wa-green);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+    .btn-wa:hover { background: #1da851; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.35); }
+
+    /* ─── NAVBAR ─── */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: var(--transition);
+    }
+    .navbar.scrolled {
+      background: rgba(27, 67, 50, 0.96);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 12px 0;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+    }
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--gold);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #fff;
+      font-size: 1.1rem;
+      line-height: 1.1;
+    }
+    .logo-text span { display: block; font-weight: 300; font-size: 0.72rem; letter-spacing: 0.1em; opacity: 0.8; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 4px;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.875rem;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.12); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--green-dark) !important;
+      font-weight: 700 !important;
+      padding: 9px 18px !important;
+      border-radius: 50px !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; color: var(--green-dark) !important; }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      width: 24px; height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: var(--transition);
+      display: block;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: var(--green-dark);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: #fff;
+      font-size: 1.4rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      transition: var(--transition);
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute;
+      top: 24px; right: 24px;
+      background: none; border: none;
+      color: #fff; font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/hero-entrance.jpeg');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.05);
+      transition: transform 8s ease;
+    }
+    .hero-bg.loaded { transform: scale(1); }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(27,67,50,0.85) 0%, rgba(27,67,50,0.5) 60%, rgba(0,0,0,0.2) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 120px 0 80px;
+      max-width: 680px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,166,35,0.15);
+      border: 1px solid rgba(245,166,35,0.4);
+      color: var(--gold-light);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+    }
+    .hero-badge::before { content: '🐾'; }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+    .hero-desc {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 520px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .hero-stat-item { text-align: left; }
+    .hero-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .hero-scroll-dot {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+
+    /* ─── INFO BAR ─── */
+    .info-bar {
+      background: var(--green-dark);
+      padding: 16px 0;
+    }
+    .info-bar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .info-bar-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    .info-bar-item .icon { font-size: 1.1rem; }
+    .info-bar-item strong { color: var(--gold-light); }
+
+    /* ─── TENTANG ─── */
+    .tentang { padding: 100px 0; background: var(--cream); }
+    .tentang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .tentang-images {
+      position: relative;
+      height: 520px;
+    }
+    .tentang-img-main {
+      position: absolute;
+      top: 0; left: 0;
+      width: 72%;
+      height: 380px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .tentang-img-main img { width: 100%; height: 100%; object-fit: cover; }
+    .tentang-img-accent {
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 58%;
+      height: 260px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid var(--cream);
+    }
+    .tentang-img-accent img { width: 100%; height: 100%; object-fit: cover; }
+    .tentang-badge-float {
+      position: absolute;
+      top: 60%;
+      left: 48%;
+      transform: translate(-50%, -50%);
+      background: var(--gold);
+      color: var(--green-dark);
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-align: center;
+      z-index: 3;
+      white-space: nowrap;
+    }
+    .tentang-badge-float span { display: block; font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; }
+    .tentang-text {}
+    .tentang-features {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .tentang-feature-item {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      border: 1px solid var(--green-pale);
+      transition: var(--transition);
+    }
+    .tentang-feature-item:hover { border-color: var(--green-light); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+    .tentang-feature-icon { font-size: 1.6rem; margin-bottom: 8px; }
+    .tentang-feature-name { font-weight: 700; font-size: 0.9rem; color: var(--green-dark); margin-bottom: 4px; }
+    .tentang-feature-desc { font-size: 0.8rem; color: var(--text-mid); }
+
+    /* ─── HEWAN ─── */
+    .hewan {
+      padding: 100px 0;
+      background: var(--green-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .hewan::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: rgba(116,198,157,0.06);
+    }
+    .hewan::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -80px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(245,166,35,0.05);
+    }
+    .hewan-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    .hewan .section-tag { background: rgba(116,198,157,0.15); color: var(--green-light); }
+    .hewan .section-title { color: #fff; }
+    .hewan .section-subtitle { color: rgba(255,255,255,0.65); margin: 0 auto; text-align: center; }
+    .hewan-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .hewan-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .hewan-card:hover { transform: translateY(-6px); border-color: var(--green-light); background: rgba(255,255,255,0.09); }
+    .hewan-card-img {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hewan-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .hewan-card:hover .hewan-card-img img { transform: scale(1.08); }
+    .hewan-card-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 50%;
+      background: linear-gradient(to top, rgba(27,67,50,0.8), transparent);
+    }
+    .hewan-card-body { padding: 18px 18px 20px; }
+    .hewan-card-latin {
+      font-size: 0.72rem;
+      color: var(--green-light);
+      font-style: italic;
+      margin-bottom: 4px;
+      font-weight: 400;
+    }
+    .hewan-card-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .hewan-card-desc {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .hewan-fact {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: rgba(245,166,35,0.1);
+      border-radius: 8px;
+      padding: 8px 10px;
+    }
+    .hewan-fact-icon { font-size: 0.85rem; flex-shrink: 0; margin-top: 1px; }
+    .hewan-fact-text { font-size: 0.74rem; color: var(--gold-light); line-height: 1.5; }
+    .hewan-cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+    .hewan-tag-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .hewan-tag {
+      background: rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.6);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.78rem;
+    }
+
+    /* ─── TIKET ─── */
+    .tiket { padding: 100px 0; background: var(--cream); }
+    .tiket-header { text-align: center; margin-bottom: 56px; }
+    .tiket .section-subtitle { margin: 0 auto; text-align: center; }
+    .tiket-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+    .tiket-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 2px solid var(--cream-dark);
+      transition: var(--transition);
+      position: relative;
+    }
+    .tiket-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .tiket-card.featured {
+      border-color: var(--green);
+      transform: scale(1.04);
+    }
+    .tiket-card.featured:hover { transform: scale(1.04) translateY(-6px); }
+    .tiket-popular {
+      position: absolute;
+      top: -1px; right: 20px;
+      background: var(--gold);
+      color: var(--green-dark);
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 6px 14px;
+      border-radius: 0 0 10px 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .tiket-header-band {
+      padding: 28px 28px 20px;
+      background: var(--green-pale);
+    }
+    .tiket-card.featured .tiket-header-band { background: var(--green); }
+    .tiket-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 4px;
+    }
+    .tiket-card.featured .tiket-name { color: #fff; }
+    .tiket-tagline { font-size: 0.82rem; color: var(--text-mid); }
+    .tiket-card.featured .tiket-tagline { color: rgba(255,255,255,0.8); }
+    .tiket-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-top: 12px;
+    }
+    .tiket-currency { font-size: 0.9rem; font-weight: 700; color: var(--green); }
+    .tiket-price-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--green-dark);
+      line-height: 1;
+    }
+    .tiket-price-note { font-size: 0.75rem; color: var(--text-light); }
+    .tiket-card.featured .tiket-currency { color: var(--gold-light); }
+    .tiket-card.featured .tiket-price-num { color: #fff; }
+    .tiket-card.featured .tiket-price-note { color: rgba(255,255,255,0.65); }
+    .tiket-body { padding: 24px 28px 28px; }
+    .tiket-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .tiket-includes li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+      line-height: 1.5;
+    }
+    .tiket-includes li::before {
+      content: '✓';
+      color: var(--green);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .tiket-divider { height: 1px; background: var(--cream-dark); margin-bottom: 20px; }
+    .tiket-btn { display: block; width: 100%; text-align: center; }
+
+    /* ─── GALERI/SUASANA ─── */
+    .galeri { padding: 80px 0; background: var(--cream-dark); }
+    .galeri-header { text-align: center; margin-bottom: 40px; }
+    .galeri-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 200px 200px;
+      gap: 12px;
+    }
+    .galeri-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+    }
+    .galeri-item:first-child {
+      grid-column: 1 / 3;
+      grid-row: 1 / 3;
+    }
+    .galeri-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .galeri-item:hover img { transform: scale(1.06); }
+
+    /* ─── PRODUK ─── */
+    .produk { padding: 100px 0; background: var(--cream); }
+    .produk-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .produk-text {}
+    .produk-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .produk-feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.875rem;
+      color: var(--text-mid);
+    }
+    .produk-feature::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+    .produk-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 48px 40px;
+      box-shadow: var(--shadow-md);
+      text-align: center;
+      position: relative;
+      border: 1px solid var(--green-pale);
+    }
+    .produk-card-label {
+      background: var(--green);
+      color: #fff;
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      display: inline-block;
+    }
+    .produk-img-placeholder {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, var(--green-pale), var(--cream-dark));
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      box-shadow: var(--shadow-md);
+    }
+    .produk-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+    }
+    .produk-sub { font-size: 0.85rem; color: var(--text-light); margin-bottom: 16px; }
+    .produk-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--green);
+      margin-bottom: 20px;
+    }
+    .produk-price span { font-size: 1rem; font-weight: 400; color: var(--text-light); }
+    .produk-badges {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .produk-badge {
+      background: var(--green-pale);
+      color: var(--green-dark);
+      padding: 5px 12px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    /* ─── RESERVASI ─── */
+    .reservasi {
+      padding: 100px 0;
+      background: var(--green-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .reservasi::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('images/hero-plaza.jpeg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.07;
+    }
+    .reservasi-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .reservasi .section-tag { background: rgba(116,198,157,0.15); color: var(--green-light); }
+    .reservasi .section-title { color: #fff; }
+    .reservasi .section-subtitle { color: rgba(255,255,255,0.7); margin: 0 auto 40px; text-align: center; }
+    .reservasi-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .reservasi-opt {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      padding: 24px 16px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .reservasi-opt:hover { background: rgba(255,255,255,0.1); border-color: var(--green-light); transform: translateY(-2px); }
+    .reservasi-opt-icon { font-size: 2rem; margin-bottom: 10px; }
+    .reservasi-opt-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .reservasi-opt-price {
+      font-size: 0.82rem;
+      color: var(--gold-light);
+      font-weight: 600;
+    }
+    .reservasi-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* ─── KONTAK ─── */
+    .kontak { padding: 100px 0; background: var(--cream); }
+    .kontak-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .kontak-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .kontak-info-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .kontak-info-icon {
+      width: 48px; height: 48px;
+      background: var(--green-pale);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .kontak-info-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .kontak-info-value {
+      font-weight: 600;
+      color: var(--green-dark);
+      font-size: 0.95rem;
+    }
+    .kontak-info-value a { color: var(--green); }
+    .kontak-map {
+      background: var(--green-pale);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+    }
+    .kontak-map-placeholder {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .kontak-map-icon { font-size: 4rem; }
+    .kontak-map-text {
+      text-align: center;
+      color: var(--green-dark);
+    }
+    .kontak-map-text h4 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 8px; }
+    .kontak-map-text p { font-size: 0.85rem; color: var(--green-mid); }
+    .kontak-sosmed {
+      display: flex;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .kontak-sosmed-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1.5px solid var(--cream-dark);
+      padding: 10px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      transition: var(--transition);
+    }
+    .kontak-sosmed-btn:hover { border-color: var(--green); color: var(--green); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      background: var(--green-dark);
+      padding: 60px 0 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand p {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.875rem;
+      line-height: 1.7;
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+    .footer-col h5 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+      letter-spacing: 0.02em;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul a {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.875rem;
+      transition: var(--transition);
+    }
+    .footer-col ul a:hover { color: var(--green-light); }
+    .footer-open {
+      background: rgba(116,198,157,0.1);
+      border: 1px solid rgba(116,198,157,0.2);
+      border-radius: var(--radius-sm);
+      padding: 14px 16px;
+      margin-top: 4px;
+    }
+    .footer-open-label { font-size: 0.72rem; color: var(--green-light); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+    .footer-open-time { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: #fff; }
+    .footer-open-days { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 2px; }
+    .footer-bottom {
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
+    .footer-bottom a { color: var(--green-light); }
+
+    /* ─── FAB WHATSAPP ─── */
+    .fab-wa {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 60px;
+      height: 60px;
+      background: var(--wa-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      z-index: 900;
+      transition: var(--transition);
+      text-decoration: none;
+    }
+    .fab-wa:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(37,211,102,0.55); }
+    .fab-wa svg { width: 28px; height: 28px; fill: #fff; }
+    .fab-wa-pulse {
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid rgba(37,211,102,0.4);
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.2); opacity: 0; }
+    }
+
+    /* ─── REVEAL ANIMATIONS ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .hewan-grid { grid-template-columns: repeat(3, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .tentang-grid,
+      .produk-grid,
+      .kontak-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hewan-grid { grid-template-columns: repeat(2, 1fr); }
+      .tiket-grid { grid-template-columns: 1fr; }
+      .tiket-card.featured { transform: none; }
+      .tiket-card.featured:hover { transform: translateY(-6px); }
+      .galeri-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .galeri-item:first-child { grid-column: 1 / 3; grid-row: 1; height: 240px; }
+      .galeri-item { height: 160px; }
+      .reservasi-options { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .tentang-images { height: 340px; }
+      .tentang-img-main { height: 260px; }
+      .tentang-img-accent { height: 180px; }
+    }
+    @media (max-width: 480px) {
+      .hewan-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 20px; }
+      .tentang-features { grid-template-columns: 1fr; }
+      .produk-features { grid-template-columns: 1fr; }
+      .galeri-grid { grid-template-columns: 1fr; }
+      .galeri-item:first-child { grid-column: 1; height: 200px; }
+      .galeri-item { height: 160px; }
+      .info-bar-inner { gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="#home" class="logo">
+          <div class="logo-icon">🐐</div>
+          <div class="logo-text">
+            Provit Farm Village
+            <span>Wisata Edukasi Hewan</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#hewan">Hewan</a></li>
+          <li><a href="#tiket">Tiket</a></li>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+          <li><a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20ingin%20reservasi%20kunjungan%20ke%20Provit%20Farm%20Village" target="_blank" class="nav-cta">Reservasi</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="#tentang" class="mobile-link">Tentang</a>
+    <a href="#hewan" class="mobile-link">Hewan</a>
+    <a href="#tiket" class="mobile-link">Tiket</a>
+    <a href="#produk" class="mobile-link">Produk</a>
+    <a href="#kontak" class="mobile-link">Kontak</a>
+    <a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20ingin%20reservasi%20kunjungan%20ke%20Provit%20Farm%20Village" target="_blank" class="btn-wa">Reservasi Sekarang</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Wisata Edukasi Hewan No.1 di Surabaya</div>
+        <h1 class="hero-title">
+          Petualangan Seru<br>di <em>Alam Nyata</em><br>Bersama Keluarga
+        </h1>
+        <p class="hero-desc">
+          Kenalkan si kecil dengan 30+ spesies hewan unik dari seluruh dunia, jelajahi Anglo Garden, saksikan Animal Show, dan nikmati pengalaman edukasi alam yang tak terlupakan.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20ingin%20reservasi%20kunjungan%20ke%20Provit%20Farm%20Village%0A%0ANama%20%3A%0AJumlah%20Pengunjung%20%3A%0ATanggal%20Kunjungan%20%3A" target="_blank" class="btn-wa">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            Reservasi via WhatsApp
+          </a>
+          <a href="#tiket" class="btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.5);">
+            Lihat Harga Tiket
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">30+</div>
+            <div class="hero-stat-label">Spesies Hewan</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">7</div>
+            <div class="hero-stat-label">Zona Wisata</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">08:00</div>
+            <div class="hero-stat-label">Buka Setiap Hari</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">3</div>
+            <div class="hero-stat-label">Paket Tiket</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="hero-scroll-dot"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══ INFO BAR ═══ -->
+  <div class="info-bar">
+    <div class="container">
+      <div class="info-bar-inner">
+        <div class="info-bar-item"><span class="icon">🕗</span> Buka <strong>08.00 – 16.00 WIB</strong></div>
+        <div class="info-bar-item"><span class="icon">📅</span> <strong>Setiap Hari</strong> — Senin s/d Minggu</div>
+        <div class="info-bar-item"><span class="icon">📍</span> Surabaya, Jawa Timur</div>
+        <div class="info-bar-item"><span class="icon">📱</span> <strong>@provitland</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TENTANG ═══ -->
+  <section class="tentang" id="tentang">
+    <div class="container">
+      <div class="tentang-grid">
+        <div class="tentang-images reveal">
+          <div class="tentang-img-main">
+            <img src="images/about-garden.jpeg" alt="Anglo Garden – Taman Indah Provit Farm Village" loading="lazy" />
+          </div>
+          <div class="tentang-img-accent">
+            <img src="images/about-mascot.jpeg" alt="Maskot Provit Farm Village" loading="lazy" />
+          </div>
+          <div class="tentang-badge-float">
+            <span>2019</span>
+            Berdiri Sejak
+          </div>
+        </div>
+        <div class="tentang-text reveal reveal-delay-2">
+          <span class="section-tag">Tentang Kami</span>
+          <h2 class="section-title">Lebih dari Sekadar Kebun Binatang</h2>
+          <p class="section-subtitle">
+            Provit Farm Village adalah destinasi wisata edukasi hewan yang menghadirkan pengalaman belajar langsung bersama satwa-satwa unik dari berbagai penjuru dunia. Terletak di Surabaya, kami berkomitmen menghadirkan wisata edukatif yang menyenangkan dan berkesan untuk seluruh keluarga.
+          </p>
+          <p class="section-subtitle" style="margin-top: 14px;">
+            Dengan nuansa farm village yang asri, pengunjung dapat berinteraksi langsung dengan hewan, menikmati Anglo Garden, menyaksikan Animal Show, hingga mencoba kuda tunggang.
+          </p>
+          <div class="tentang-features">
+            <div class="tentang-feature-item">
+              <div class="tentang-feature-icon">🦜</div>
+              <div class="tentang-feature-name">Animal Show</div>
+              <div class="tentang-feature-desc">Pertunjukan hewan interaktif setiap hari</div>
+            </div>
+            <div class="tentang-feature-item">
+              <div class="tentang-feature-icon">🌿</div>
+              <div class="tentang-feature-name">Anglo Garden</div>
+              <div class="tentang-feature-desc">Taman Jepang yang asri dan instagramable</div>
+            </div>
+            <div class="tentang-feature-item">
+              <div class="tentang-feature-icon">🐎</div>
+              <div class="tentang-feature-name">Kuda Tunggang</div>
+              <div class="tentang-feature-desc">Pengalaman berkuda yang menyenangkan</div>
+            </div>
+            <div class="tentang-feature-item">
+              <div class="tentang-feature-icon">🥛</div>
+              <div class="tentang-feature-name">Show Perah</div>
+              <div class="tentang-feature-desc">Lihat langsung proses pemerahan susu kambing</div>
+            </div>
+            <div class="tentang-feature-item">
+              <div class="tentang-feature-icon">🦎</div>
+              <div class="tentang-feature-name">Zona Reptil</div>
+              <div class="tentang-feature-desc">Kenali berbagai jenis reptil unik dunia</div>
+            </div>
+            <div class="tentang-feature-item">
+              <div class="tentang-feature-icon">🐦</div>
+              <div class="tentang-feature-name">Aviary</div>
+              <div class="tentang-feature-desc">Birdhouse dengan berbagai jenis burung langka</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HEWAN ═══ -->
+  <section class="hewan" id="hewan">
+    <div class="container">
+      <div class="hewan-header reveal">
+        <span class="section-tag">Koleksi Satwa</span>
+        <h2 class="section-title" style="color:#fff;">Kenali Satwa-Satwa Unik Kami</h2>
+        <p class="section-subtitle">30+ spesies dari seluruh dunia, lengkap dengan papan edukasi bilingual untuk pembelajaran yang menyenangkan.</p>
+      </div>
+      <div class="hewan-grid">
+
+        <div class="hewan-card reveal reveal-delay-1">
+          <div class="hewan-card-img">
+            <img src="images/animal-crocodile.jpeg" alt="Buaya Muara" loading="lazy" />
+            <div class="hewan-card-overlay"></div>
+          </div>
+          <div class="hewan-card-body">
+            <div class="hewan-card-latin">Crocodylus porosus</div>
+            <div class="hewan-card-name">Buaya Muara</div>
+            <div class="hewan-card-desc">Asal: Asia Tenggara & Australia. Hidup di sungai, danau, dan hutan hujan.</div>
+            <div class="hewan-fact">
+              <span class="hewan-fact-icon">💡</span>
+              <span class="hewan-fact-text">Buaya adalah satwa paling setia pada pasangannya</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hewan-card reveal reveal-delay-2">
+          <div class="hewan-card-img">
+            <img src="images/animal-nuri-bayan.jpeg" alt="Nuri Bayan" loading="lazy" />
+            <div class="hewan-card-overlay"></div>
+          </div>
+          <div class="hewan-card-body">
+            <div class="hewan-card-latin">Eclectus roratus</div>
+            <div class="hewan-card-name">Nuri Bayan</div>
+            <div class="hewan-card-desc">Asal: Papua & Maluku. Burung dengan bulu merah menyala yang memukau.</div>
+            <div class="hewan-fact">
+              <span class="hewan-fact-icon">💡</span>
+              <span class="hewan-fact-text">Bisa meniru suara manusia dengan sangat akurat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hewan-card reveal reveal-delay-3">
+          <div class="hewan-card-img">
+            <img src="images/animal-peacock.jpeg" alt="Merak Biru" loading="lazy" />
+            <div class="hewan-card-overlay"></div>
+          </div>
+          <div class="hewan-card-body">
+            <div class="hewan-card-latin">Pavo cristatus</div>
+            <div class="hewan-card-name">Merak Biru India</div>
+            <div class="hewan-card-desc">Asal: India & Sri Lanka. Hidup di hutan, semak, dan padang rumput.</div>
+            <div class="hewan-fact">
+              <span class="hewan-fact-icon">💡</span>
+              <span class="hewan-fact-text">Merak jantan punya ekor indah untuk menarik perhatian betina</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hewan-card reveal reveal-delay-4">
+          <div class="hewan-card-img">
+            <img src="images/animal-owl.jpeg" alt="Burung Hantu Cokelat" loading="lazy" />
+            <div class="hewan-card-overlay"></div>
+          </div>
+          <div class="hewan-card-body">
+            <div class="hewan-card-latin">Bubo sumatranus</div>
+            <div class="hewan-card-name">Burung Hantu Cokelat</div>
+            <div class="hewan-card-desc">Asal: Pulau-pulau Indonesia. Predator malam yang elegan dan misterius.</div>
+            <div class="hewan-fact">
+              <span class="hewan-fact-icon">💡</span>
+              <span class="hewan-fact-text">Bisa memutar kepalanya hingga 270 derajat!</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hewan-card reveal reveal-delay-1">
+          <div class="hewan-card-img">
+            <img src="images/animal-meerkat.jpeg" alt="Meerkat" loading="lazy" />
+            <div class="hewan-card-overlay"></div>
+          </div>
+          <div class="hewan-card-body">
+            <div class="hewan-card-latin">Suricata suricatta</div>
+            <div class="hewan-card-name">Meerkat</div>
+            <div class="hewan-card-desc">Asal: Afrika Selatan. Hidup berkelompok di savana dan gurun kering.</div>
+            <div class="hewan-fact">
+              <span class="hewan-fact-icon">💡</span>
+              <span class="hewan-fact-text">Berdiri tegak untuk memantau predator sambil menghangatkan tubuh</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hewan-card reveal reveal-delay-2">
+          <div class="hewan-card-img">
+            <img src="images/animal-turtle.jpeg" alt="Kura-kura Darat" loading="lazy" />
+            <div class="hewan-card-overlay"></div>
+          </div>
+          <div class="hewan-card-body">
+            <div class="hewan-card-latin">Chelonoidis sp.</div>
+            <div class="hewan-card-name">Kura-kura Darat</div>
+            <div class="hewan-card-desc">Herbivora raksasa pemakan buah-buahan dan sayuran hijau yang segar.</div>
+            <div class="hewan-fact">
+              <span class="hewan-fact-icon">💡</span>
+              <span class="hewan-fact-text">Kura-kura terbesar ketiga di dunia setelah Galapagos dan Aldabra</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hewan-card reveal reveal-delay-3">
+          <div class="hewan-card-img">
+            <img src="images/animal-lovebird.jpeg" alt="Lovebird" loading="lazy" />
+            <div class="hewan-card-overlay"></div>
+          </div>
+          <div class="hewan-card-body">
+            <div class="hewan-card-latin">Agapornis sp.</div>
+            <div class="hewan-card-name">Lovebird</div>
+            <div class="hewan-card-desc">Burung beo kecil berwarna-warni yang setia berpasangan seumur hidup.</div>
+            <div class="hewan-fact">
+              <span class="hewan-fact-icon">💡</span>
+              <span class="hewan-fact-text">Nama "lovebird" karena selalu berdekatan dengan pasangannya</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hewan-card reveal reveal-delay-4">
+          <div class="hewan-card-img">
+            <img src="images/animal-prairie-dog.jpeg" alt="Prairie Dog" loading="lazy" />
+            <div class="hewan-card-overlay"></div>
+          </div>
+          <div class="hewan-card-body">
+            <div class="hewan-card-latin">Cynomys sp.</div>
+            <div class="hewan-card-name">Prairie Dog</div>
+            <div class="hewan-card-desc">Asal: Amerika Utara. Hidup di padang rumput dan dataran terbuka.</div>
+            <div class="hewan-fact">
+              <span class="hewan-fact-icon">💡</span>
+              <span class="hewan-fact-text">Punya bahasa vokal yang kompleks dengan 100+ suara berbeda!</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="hewan-cta reveal">
+        <p style="color:rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 20px;">Dan masih banyak lagi satwa unik lainnya yang menunggumu!</p>
+        <div class="hewan-tag-row">
+          <span class="hewan-tag">🐍 Ular Sanca</span>
+          <span class="hewan-tag">🦚 Merak Putih</span>
+          <span class="hewan-tag">🐎 Kuda</span>
+          <span class="hewan-tag">🐐 Kambing Etawa</span>
+          <span class="hewan-tag">🐇 Kelinci</span>
+          <span class="hewan-tag">🦦 Jearang</span>
+          <span class="hewan-tag">🐓 Ayam Hias</span>
+          <span class="hewan-tag">+ Banyak Lagi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GALERI SUASANA ═══ -->
+  <section class="galeri">
+    <div class="container">
+      <div class="galeri-header reveal">
+        <span class="section-tag">Galeri Suasana</span>
+        <h2 class="section-title">Temukan Keindahan Provit Farm Village</h2>
+      </div>
+      <div class="galeri-grid reveal">
+        <div class="galeri-item">
+          <img src="images/hero-plaza.jpeg" alt="Plaza Utama Provit Farm Village" loading="lazy" />
+        </div>
+        <div class="galeri-item">
+          <img src="images/facility-cafe.jpeg" alt="Cafe & Resto Area" loading="lazy" />
+        </div>
+        <div class="galeri-item">
+          <img src="images/animal-horse.jpeg" alt="Zona Kuda Tunggang" loading="lazy" />
+        </div>
+        <div class="galeri-item">
+          <img src="images/animal-goat-barn.jpeg" alt="Kandang Kambing" loading="lazy" />
+        </div>
+        <div class="galeri-item">
+          <img src="images/animal-peacock-wide.jpeg" alt="Aviary Merak" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TIKET ═══ -->
+  <section class="tiket" id="tiket">
+    <div class="container">
+      <div class="tiket-header reveal">
+        <span class="section-tag">Harga Tiket</span>
+        <h2 class="section-title">Pilih Paket Kunjungan Terbaik</h2>
+        <p class="section-subtitle">Tersedia tiga paket tiket dengan fasilitas berbeda. Reservasi lebih mudah via WhatsApp!</p>
+      </div>
+      <div class="tiket-grid">
+
+        <!-- Sapera -->
+        <div class="tiket-card reveal reveal-delay-1">
+          <div class="tiket-header-band">
+            <div class="tiket-name">Sapera</div>
+            <div class="tiket-tagline">Paket Pengalaman Dasar</div>
+            <div class="tiket-price-row">
+              <span class="tiket-currency">Rp</span>
+              <span class="tiket-price-num">20–25K</span>
+              <span class="tiket-price-note">/orang</span>
+            </div>
+          </div>
+          <div class="tiket-body">
+            <ul class="tiket-includes">
+              <li>Akses Area Utama & Plaza</li>
+              <li>Zona Reptil (Ular, Buaya, Kura-kura)</li>
+              <li>Area Burung (Lovebird, Nuri, Merak)</li>
+              <li>Anglo Garden</li>
+              <li>Area Parkir Gratis</li>
+              <li>Mushola & Toilet Bersih</li>
+            </ul>
+            <div class="tiket-divider"></div>
+            <a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20mau%20tanya%20info%20tiket%20*Sapera*%20(Rp%2020-25K)%20%F0%9F%90%8A%0A%0ANama%20%3A%0AJumlah%20tiket%20%3A%0ATanggal%20kunjungan%20%3A" target="_blank" class="btn-outline tiket-btn">Pesan Tiket Sapera</a>
+          </div>
+        </div>
+
+        <!-- Anglo (Featured) -->
+        <div class="tiket-card featured reveal reveal-delay-2">
+          <div class="tiket-popular">Terpopuler</div>
+          <div class="tiket-header-band">
+            <div class="tiket-name">Anglo</div>
+            <div class="tiket-tagline">Paket Wisata Lengkap</div>
+            <div class="tiket-price-row">
+              <span class="tiket-currency">Rp</span>
+              <span class="tiket-price-num">30–35K</span>
+              <span class="tiket-price-note">/orang</span>
+            </div>
+          </div>
+          <div class="tiket-body">
+            <ul class="tiket-includes">
+              <li>Semua fasilitas paket Sapera</li>
+              <li>Animal Show – Pertunjukan Interaktif</li>
+              <li>Zona Kelinci & Hewan Peliharaan</li>
+              <li>Parlour Show Perah Kambing</li>
+              <li>Area Prairie Dog & Meerkat</li>
+              <li>Foto Bersama Hewan (terpilih)</li>
+              <li>Akses Anglo Garden VIP Area</li>
+            </ul>
+            <div class="tiket-divider"></div>
+            <a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20mau%20tanya%20info%20tiket%20*Anglo*%20(Rp%2030-35K)%20%F0%9F%A6%9A%0A%0ANama%20%3A%0AJumlah%20tiket%20%3A%0ATanggal%20kunjungan%20%3A" target="_blank" class="btn-primary tiket-btn">Pesan Tiket Anglo</a>
+          </div>
+        </div>
+
+        <!-- Merino -->
+        <div class="tiket-card reveal reveal-delay-3">
+          <div class="tiket-header-band">
+            <div class="tiket-name">Merino</div>
+            <div class="tiket-tagline">Paket Premium All-In</div>
+            <div class="tiket-price-row">
+              <span class="tiket-currency">Rp</span>
+              <span class="tiket-price-num">60–65K</span>
+              <span class="tiket-price-note">/orang</span>
+            </div>
+          </div>
+          <div class="tiket-body">
+            <ul class="tiket-includes">
+              <li>Semua fasilitas paket Anglo</li>
+              <li>🐎 Kuda Tunggang (1 sesi)</li>
+              <li>Menyentuh & Memberi Makan Hewan</li>
+              <li>Tour Guide Personal</li>
+              <li>Suvenir Foto Eksklusif</li>
+              <li>Diskon 10% Produk Etafresh</li>
+              <li>Akses Seluruh Area Tanpa Batas</li>
+            </ul>
+            <div class="tiket-divider"></div>
+            <a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20mau%20tanya%20info%20tiket%20*Merino*%20(Rp%2060-65K)%20%F0%9F%8F%86%0A%0ANama%20%3A%0AJumlah%20tiket%20%3A%0ATanggal%20kunjungan%20%3A" target="_blank" class="btn-outline tiket-btn">Pesan Tiket Merino</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRODUK ═══ -->
+  <section class="produk" id="produk">
+    <div class="container">
+      <div class="produk-grid">
+        <div class="produk-text reveal">
+          <span class="section-tag">Produk Unggulan</span>
+          <h2 class="section-title">Etafresh — Susu Kambing Segar Alami</h2>
+          <p class="section-subtitle">
+            Nikmati cita rasa susu kambing Etawa segar yang diproduksi langsung dari peternakan Provit Farm Village. Diproses secara higienis, kaya nutrisi, dan tersedia dalam varian rasa yang disukai semua kalangan.
+          </p>
+          <div class="produk-features">
+            <div class="produk-feature">100% Susu Kambing Etawa</div>
+            <div class="produk-feature">Tanpa Bahan Pengawet</div>
+            <div class="produk-feature">Kaya Protein & Kalsium</div>
+            <div class="produk-feature">Cocok untuk Segala Usia</div>
+            <div class="produk-feature">Rasa Vanilla yang Lezat</div>
+            <div class="produk-feature">Higienis & Terjamin</div>
+          </div>
+          <div style="margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20mau%20order%20*Susu%20Kambing%20Etafresh*%20%F0%9F%A5%9B%0A%0AJumlah%20%3A%0AVariant%20%3A%20Vanilla%0A%0ATerima%20kasih!" target="_blank" class="btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Order Sekarang
+            </a>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="produk-card">
+            <div class="produk-card-label">🥛 Produk Andalan</div>
+            <div class="produk-img-placeholder">🥛</div>
+            <div class="produk-name">Etafresh</div>
+            <div class="produk-sub">Susu Kambing Etawa — Varian Vanilla</div>
+            <div class="produk-price">Rp 10.000 <span>/ botol</span></div>
+            <div class="produk-badges">
+              <span class="produk-badge">✓ Segar</span>
+              <span class="produk-badge">✓ Alami</span>
+              <span class="produk-badge">✓ Bergizi</span>
+              <span class="produk-badge">✓ Halal</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RESERVASI ═══ -->
+  <section class="reservasi" id="reservasi">
+    <div class="reservasi-inner reveal">
+      <span class="section-tag">Reservasi</span>
+      <h2 class="section-title">Siap Berkunjung?</h2>
+      <p class="section-subtitle">
+        Rencanakan kunjunganmu sekarang! Reservasi mudah dan cepat langsung via WhatsApp. Pilih paket sesuai kebutuhan keluarga.
+      </p>
+      <div class="reservasi-options">
+        <a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20mau%20tanya%20info%20tiket%20*Sapera*%20(Rp%2020-25K)%20%F0%9F%90%8A%0A%0ANama%20%3A%0AJumlah%20tiket%20%3A%0ATanggal%20kunjungan%20%3A" target="_blank" class="reservasi-opt">
+          <div class="reservasi-opt-icon">🐊</div>
+          <div class="reservasi-opt-name">Sapera</div>
+          <div class="reservasi-opt-price">Rp 20–25K / orang</div>
+        </a>
+        <a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20mau%20tanya%20info%20tiket%20*Anglo*%20(Rp%2030-35K)%20%F0%9F%A6%9A%0A%0ANama%20%3A%0AJumlah%20tiket%20%3A%0ATanggal%20kunjungan%20%3A" target="_blank" class="reservasi-opt">
+          <div class="reservasi-opt-icon">🦚</div>
+          <div class="reservasi-opt-name">Anglo</div>
+          <div class="reservasi-opt-price">Rp 30–35K / orang</div>
+        </a>
+        <a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20mau%20tanya%20info%20tiket%20*Merino*%20(Rp%2060-65K)%20%F0%9F%8F%86%0A%0ANama%20%3A%0AJumlah%20tiket%20%3A%0ATanggal%20kunjungan%20%3A" target="_blank" class="reservasi-opt">
+          <div class="reservasi-opt-icon">🐎</div>
+          <div class="reservasi-opt-name">Merino</div>
+          <div class="reservasi-opt-price">Rp 60–65K / orang</div>
+        </a>
+      </div>
+      <div class="reservasi-actions">
+        <a href="https://wa.me/6289629672705?text=Halo%20kak%2C%20saya%20ingin%20reservasi%20kunjungan%20ke%20Provit%20Farm%20Village%0A%0ANama%20%3A%0AJumlah%20Pengunjung%20%3A%0ATanggal%20Kunjungan%20%3A%0APermintaan%20khusus%20%3A" target="_blank" class="btn-wa">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Chat WhatsApp Sekarang
+        </a>
+        <a href="tel:+6289629672705" class="btn-outline" style="color:#fff; border-color:rgba(255,255,255,0.4);">
+          📞 Telepon Kami
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ KONTAK ═══ -->
+  <section class="kontak" id="kontak">
+    <div class="container">
+      <div class="kontak-grid">
+        <div class="reveal">
+          <span class="section-tag">Hubungi Kami</span>
+          <h2 class="section-title">Temukan Kami di Sini</h2>
+          <p class="section-subtitle">Kami siap membantu pertanyaan dan kebutuhanmu. Hubungi kami kapan saja di jam operasional.</p>
+          <div class="kontak-info-list">
+            <div class="kontak-info-item">
+              <div class="kontak-info-icon">📍</div>
+              <div>
+                <div class="kontak-info-label">Alamat</div>
+                <div class="kontak-info-value">Surabaya, Jawa Timur<br><small style="color: var(--text-light); font-weight: 400;">📌 Alamat lengkap segera diperbarui</small></div>
+              </div>
+            </div>
+            <div class="kontak-info-item">
+              <div class="kontak-info-icon">📱</div>
+              <div>
+                <div class="kontak-info-label">WhatsApp / Telepon</div>
+                <div class="kontak-info-value"><a href="tel:+6289629672705">+62 896-2967-2705</a> (Tian)</div>
+              </div>
+            </div>
+            <div class="kontak-info-item">
+              <div class="kontak-info-icon">🕗</div>
+              <div>
+                <div class="kontak-info-label">Jam Operasional</div>
+                <div class="kontak-info-value">08:00 – 16:00 WIB<br><small style="font-weight: 400; color: var(--text-mid);">Senin – Minggu (Setiap Hari)</small></div>
+              </div>
+            </div>
+            <div class="kontak-info-item">
+              <div class="kontak-info-icon">🌐</div>
+              <div>
+                <div class="kontak-info-label">Website & Sosial Media</div>
+                <div class="kontak-info-value"><a href="http://www.provitland.com" target="_blank">www.provitland.com</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="kontak-sosmed">
+            <a href="https://www.instagram.com/provitland" target="_blank" class="kontak-sosmed-btn">
+              <span>📷</span> Instagram
+            </a>
+            <a href="https://www.tiktok.com/@provitland" target="_blank" class="kontak-sosmed-btn">
+              <span>🎵</span> TikTok
+            </a>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="kontak-map">
+            <div class="kontak-map-placeholder">
+              <div class="kontak-map-icon">🗺️</div>
+              <div class="kontak-map-text">
+                <h4>Provit Farm Village</h4>
+                <p>Surabaya, Jawa Timur</p>
+                <br>
+                <a href="https://maps.google.com/?q=Provit+Farm+Village+Surabaya" target="_blank" class="btn-primary" style="font-size: 0.82rem; padding: 11px 20px;">
+                  📍 Buka di Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">🐐</div>
+            <div class="logo-text">
+              Provit Farm Village
+              <span>Wisata Edukasi Hewan</span>
+            </div>
+          </div>
+          <p>Destinasi wisata edukasi hewan terlengkap di Surabaya. Pengalaman belajar bersama alam yang tak terlupakan untuk seluruh keluarga.</p>
+          <div class="footer-open">
+            <div class="footer-open-label">⏰ Jam Buka</div>
+            <div class="footer-open-time">08:00 – 16:00 WIB</div>
+            <div class="footer-open-days">Setiap Hari — Senin s/d Minggu</div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigasi</h5>
+          <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#hewan">Koleksi Hewan</a></li>
+            <li><a href="#tiket">Harga Tiket</a></li>
+            <li><a href="#produk">Produk Etafresh</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Fasilitas</h5>
+          <ul>
+            <li><a href="#">Animal Show</a></li>
+            <li><a href="#">Anglo Garden</a></li>
+            <li><a href="#">Kuda Tunggang</a></li>
+            <li><a href="#">Parlour Show Perah</a></li>
+            <li><a href="#">Zona Reptil & Aviary</a></li>
+            <li><a href="#">Cafe & Resto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Kontak</h5>
+          <ul>
+            <li><a href="tel:+6289629672705">+62 896-2967-2705</a></li>
+            <li><a href="https://wa.me/6289629672705" target="_blank">Chat WhatsApp</a></li>
+            <li><a href="https://instagram.com/provitland" target="_blank">@provitland</a></li>
+            <li><a href="https://tiktok.com/@provitland" target="_blank">TikTok: @provitland</a></li>
+            <li><a href="http://www.provitland.com" target="_blank">www.provitland.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Provit Farm Village. Surabaya, Jawa Timur.</p>
+        <p>Made with 🌿 untuk wisata edukasi Indonesia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ FAB WHATSAPP ═══ -->
+  <a href="https://wa.me/6289629672705?text=Halo%20kak%20Provit%20Farm%20Village%2C%20saya%20mau%20tanya%20info%20lebih%20lanjut%20%F0%9F%90%BE" target="_blank" class="fab-wa" aria-label="Chat WhatsApp">
+    <div class="fab-wa-pulse"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <script>
+    // ─── NAVBAR SCROLL ───
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ─── HERO PARALLAX IMAGE LOAD ───
+    const heroBg = document.getElementById('heroBg');
+    const heroImg = new Image();
+    heroImg.onload = () => heroBg.classList.add('loaded');
+    heroImg.src = 'images/hero-entrance.jpeg';
+    heroBg.style.backgroundImage = "url('images/hero-entrance.jpeg')";
+
+    // ─── MOBILE MENU ───
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    const closeMenu = () => {
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    };
+    mobileClose.addEventListener('click', closeMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    // ─── REVEAL ON SCROLL ───
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ─── SMOOTH SCROLL FOR ANCHOR LINKS ───
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ─── LAZY IMAGE FALLBACK ───
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+      img.addEventListener('error', function() {
+        this.style.background = '#D8F3DC';
+        this.style.minHeight = '100%';
+        this.alt = this.alt || 'Foto tidak tersedia';
+      });
+    });
+  </script>
+</body>
+</html>
